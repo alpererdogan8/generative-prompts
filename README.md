@@ -6,9 +6,7 @@ This enhanced extension is designed to further simplify access to ChatGPT by ada
 | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | [![🧠 Awesome-Prompts](https://img.shields.io/badge/🧠_Awesome_Prompts-black)](https://github.com/f/awesome-chatgpt-prompts) | [![👨🏻‍🎤 Generate-ChatGPT](https://img.shields.io/badge/👨🏻‍🎤_Generate_ChatGPT-orange)](https://huggingface.co/spaces/merve/ChatGPT-prompt-generator) | [![Chrome_Extension](https://img.shields.io/badge/Chrome_Extension-black)](https://github.com/f/awesome-chatgpt-prompts) |
 
-## 📦 Install
-
----
+# 📦 Install
 
 First install the project dependencies and get the build
 
