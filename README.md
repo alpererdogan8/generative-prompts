@@ -10,7 +10,7 @@ This enhanced extension is designed to further simplify access to ChatGPT by ada
 
 First install the project dependencies and get the build
 
-`npm install --force` and `npm run dev`
+`npm install --force` and `npm run build`
 
 And activate the developer mode and then select the `dist` file from load unpacked
 
