@@ -20,9 +20,7 @@ And activate the developer mode and then select the `dist` file from load unpack
 
 ![chrome_extension](./repo_asset/PNG/chrome-extension-install.png)
 
-## 🗒️ Todo
-
----
+# 🗒️ Todo
 
 - [ ] Awesome prompt categorization
 - [ ] Mobile responsive improvements
