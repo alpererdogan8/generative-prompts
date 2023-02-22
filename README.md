@@ -1,6 +1,7 @@
 # 🚀Awesome Prompts & ChatGPT Prompt Generator
 
 This enhanced extension is designed to further simplify access to ChatGPT by adapting the two repositories' awesome prompt list and prompt generator interfaces trained with that list.
+**It is an unofficial project for personal learning purposes only.**
 
 | Github Repo                                                                                                                | Huggingface Space                                                                                                                             | Chrome Extension                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
