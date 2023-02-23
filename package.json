@@ -1,5 +1,5 @@
 {
-	"name": "generative-prompts-extension",
+	"name": "generative-prompts",
 	"description": "An extension for displaying entries from the Awesome ChatGPT Prompts repository and featuring a prompt generator.",
 	"private": true,
 	"version": "1.0.0",
