@@ -2,7 +2,7 @@
 export async function fetchDataGeneratePrompt(generatePrompt) {
 	try {
 		const response = await fetch(
-			'https://merve-chatgpt-prompt-generator.hf.space/run/predict',
+			'https://merve-chatgpt-prompt-generator-v12.hf.space/run/predict',
 			{
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
