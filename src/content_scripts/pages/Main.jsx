@@ -56,7 +56,7 @@ const Main = () => {
 							trained on a BART model developed by
 							<a
 								className="hover:text-orange-600 text-orange-300 underline underline-offset-4 font-bold"
-								href="https://huggingface.co/spaces/merve/ChatGPT-prompt-generator">
+								href="https://merve-chatgpt-prompt-generator-v12.hf.space/run/predict">
 								{' '}
 								huggingface.co/merve{' '}
 							</a>
