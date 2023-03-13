@@ -12,7 +12,7 @@
 	},
 	"host_permissions": [
 		"https://raw.githubusercontent.com/f/awesome-chatgpt-prompts/main/prompts.csv",
-		"https://merve-chatgpt-prompt-generator.hf.space/run/predict'"
+		"https://merve-chatgpt-prompt-generator-v12.hf.space/run/predict"
 	],
 	"permissions": ["storage"],
 	"background": {
