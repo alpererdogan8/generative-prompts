@@ -7,7 +7,7 @@ import Loading from './components/Loading';
 function App() {
 	const { isOpenModal, setIsOpenModal, loading } = usePrompts();
 	const main = document.querySelector(
-		'#__next > div.overflow-hidden.w-full.h-full.relative > div.flex.h-full.flex-1.flex-col.md\\:pl-\\[260px\\] > main',
+		'#__next > div.overflow-hidden.w-full.h-full.relative.flex > div.flex.h-full.flex-1.flex-col > main',
 	);
 
 	useEffect(() => {
