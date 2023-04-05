@@ -2,7 +2,7 @@
 	"name": "generative-prompts",
 	"description": "An extension for displaying entries from the Awesome ChatGPT Prompts repository and featuring a prompt generator.",
 	"private": true,
-	"version": "1.0.0",
+	"version": "1.0.4",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
