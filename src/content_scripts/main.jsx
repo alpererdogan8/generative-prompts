@@ -9,7 +9,7 @@ const rootEl = document.querySelector('div[id="__next"]');
 //The created button is being added to the first index of the selected tag
 const createHtmlSpan = () => {
 	const nav = document.querySelector(
-		'#__next > div > div.dark.hidden.bg-gray-900.md\\:fixed.md\\:inset-y-0.md\\:flex.md\\:w-\\[260px\\].md\\:flex-col > div > div > nav',
+		'#__next > div.overflow-hidden.w-full.h-full.relative.flex > div.dark.hidden.bg-gray-900.md\\:flex.md\\:w-\\[260px\\].md\\:flex-col > div > div > nav',
 	);
 
 	const button = document.createElement('span');
