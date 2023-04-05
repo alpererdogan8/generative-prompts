@@ -2,7 +2,7 @@
 	"name": "Generative Prompts",
 	"action": {},
 	"manifest_version": 3,
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "An extension for displaying entries from the Awesome ChatGPT Prompts repository and featuring a prompt generator.",
 	"icons": {
 		"16": "icons/16.png",
