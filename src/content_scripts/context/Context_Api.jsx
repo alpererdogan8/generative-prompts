@@ -42,6 +42,7 @@ const PromptsContextProvider = ({ children }) => {
 		e.preventDefault();
 		setIsOpenModal(false);
 		setSearch('');
+		form.querySelector('button').disabled = false;
 		form.querySelector('textarea').value = data;
 		form.querySelector('button').click();
 	};
