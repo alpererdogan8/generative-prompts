@@ -20,7 +20,7 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["https://chat.openai.com/chat/*"],
+			"matches": ["https://chat.openai.com/*"],
 			"js": ["./src/content_scripts/main.jsx"]
 		}
 	]
