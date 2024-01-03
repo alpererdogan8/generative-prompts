@@ -37,14 +37,15 @@ const PromptsContextProvider = ({ children }) => {
 	}, [prompts, search, page]);
 
 	const form = document.querySelector('form');
+	const button = form.querySelectorAll('button')[4];
 
 	const handleSubmit = (e, data) => {
 		e.preventDefault();
 		setIsOpenModal(false);
 		setSearch('');
-		form.querySelector('button').disabled = false;
-		form.querySelector('textarea').value = data;
-		form.querySelector('button').click();
+		button.disabled = false;
+		form.querySelector('#prompt-textarea').value = data;
+		button.click();
 	};
 
 	const handleGeneratePrompt = async () => {
@@ -58,8 +59,6 @@ const PromptsContextProvider = ({ children }) => {
 	};
 	const handleDeleteGeneratedPrompt = (id) => {
 		const filteredItems = storedValue.filter((item) => item?._id !== id);
-		console.table(storedValue);
-		console.table(filteredItems);
 		setStoredValue('delete', filteredItems);
 	};
 
