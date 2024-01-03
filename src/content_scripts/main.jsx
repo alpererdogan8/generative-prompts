@@ -12,6 +12,7 @@ const createHtmlSpan = () => {
 
 	const button = document.createElement('span');
 	button.id = 'generative_prompts';
+	button.className = 'flex items-center -mb-1 mt-2.5 w-full';
 
 	nav.prepend(button);
 
