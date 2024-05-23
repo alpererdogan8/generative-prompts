@@ -18,8 +18,7 @@
 		"react-markdown": "^8.0.5",
 		"react-textarea-autosize": "^8.4.0",
 		"react-virtualized-auto-sizer": "^1.0.7",
-		"react-window": "^1.8.8",
-		"uuid": "^9.0.0"
+		"react-window": "^1.8.8"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.26",
