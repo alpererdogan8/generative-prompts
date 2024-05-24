@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { usePrompts } from '../../context/Context_Api';
 import Textarea from './Textarea';
-import { useEffect } from 'react';
 
 const Card = ({ act = '...', prompt, maxRows = 7 }) => {
 	const [cardData, setCardData] = useState({});
@@ -23,11 +22,11 @@ const Card = ({ act = '...', prompt, maxRows = 7 }) => {
 				<div className="w-11/12 flex mx-5 justify-between items-center">
 					<ReactMarkdown
 						components={MarkdownComponent}
-						className=" mt-2 text-white text-lg  font-semibold">
+						className=" mt-2  text-lg  font-semibold">
 						{`Act as a ${cardData.act}`}
 					</ReactMarkdown>
 					<button
-						className="p-2 rounded-md mt-2 text-gray-500 bottom-1.5 right-1 md:bottom-2.5 md:right-2  dark:hover:text-gray-400 hover:bg-gray-900 bg-[#343541] disabled:bg-[#787986] disabled:hover:bg-[#787986]"
+						className="p-2 rounded-md mt-2 text-gray-500 bottom-1.5 right-1 md:bottom-2.5 md:right-2  dark:hover:text-gray-400 hover:bg-[#343541]/80 bg-[#343541] disabled:bg-[#787986] disabled:hover:bg-[#787986]"
 						disabled={
 							typeof cardData?.prompt === 'undefined' || cardData.prompt === ''
 								? true
@@ -50,7 +49,7 @@ const Card = ({ act = '...', prompt, maxRows = 7 }) => {
 				<Textarea
 					maxRows={maxRows}
 					tabIndex={-1}
-					className="w-11/12 min-h-[132px] m-5 md:py-3 md:pl-4 relative border  border-gray-900/60 text-slate-100 bg-gray-800 rounded-md shadow-[0_0_15px_rgba(0,0,0,0.10)] resize-none"
+					className="w-11/12 min-h-[132px] m-5 md:py-3 md:pl-4 relative border  border-gray-900/60 bg-[#f4f4f4] dark:bg-token-main-surface-secondary rounded-md resize-none"
 					value={cardData.prompt}
 					onChange={(e) => setCardData({ ...cardData, prompt: e.target.value })}
 				/>
