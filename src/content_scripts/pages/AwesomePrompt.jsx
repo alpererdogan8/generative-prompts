@@ -1,10 +1,10 @@
-import { FixedSizeList as List } from 'react-window';
-import AutoSizer from 'react-virtualized-auto-sizer';
-import NotFoundPrompt from '../components/modal_components/awesome_prompts_components/NotFoundPrompt';
-import { usePrompts } from '../context/Context_Api';
-import Card from '../components/modal_components/Card';
-import TopScroll from '../components/modal_components/awesome_prompts_components/TopScroll';
 import { createRef } from 'react';
+import AutoSizer from 'react-virtualized-auto-sizer';
+import { FixedSizeList as List } from 'react-window';
+import Card from '../components/modal_components/Card';
+import NotFoundPrompt from '../components/modal_components/awesome_prompts_components/NotFoundPrompt';
+import TopScroll from '../components/modal_components/awesome_prompts_components/TopScroll';
+import { usePrompts } from '../context/Context_Api';
 
 const AwesomePrompt = () => {
 	const { promptsMemo } = usePrompts();
@@ -17,7 +17,7 @@ const AwesomePrompt = () => {
 	);
 
 	return (
-		<div className="w-full  rounded-b-xl bg-[#474a58] h-[84.5%]">
+		<div className="w-full  rounded-b-xl bg-token-sidebar-surface-primary h-[84.5%]">
 			<TopScroll scroll={() => listRef.current.scrollToItem(0)} />
 			{promptsMemo.length !== 0 ? (
 				<AutoSizer>
