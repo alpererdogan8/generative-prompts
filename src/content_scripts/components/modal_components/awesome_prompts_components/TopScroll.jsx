@@ -8,7 +8,7 @@ const TopScroll = ({ scroll }) => {
 	return (
 		<button
 			onClick={handleScroll}
-			className=" absolute right-1 bottom-2 p-2 m-1 z-[9999] bg-[#000] cursor-pointer hover:bg-[#424242] rounded-full">
+			className=" absolute right-7 bottom-5 p-2 m-1 z-[9999] bg-[#000] cursor-pointer hover:bg-[#424242] rounded-full">
 			<svg
 				stroke="currentColor"
 				fill="none"
