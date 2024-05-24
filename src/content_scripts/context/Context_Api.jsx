@@ -1,21 +1,13 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import { getAwesomePrompts } from '../service/API/AwesomePromptsAPI';
-import { fetchDataGeneratePrompt } from '../service/API/GeneratePromptsAPI';
 import { useChromeExtensionStorage } from '../hooks/useChromeExtensionStorage';
-import { v4 } from 'uuid';
+import { getAwesomePrompts } from '../service/API/AwesomePromptsAPI';
 export const PromptsContext = createContext();
 
 const PromptsContextProvider = ({ children }) => {
 	const [isOpenModal, setIsOpenModal] = useState(false);
 	const [prompts, setPrompts] = useState([]);
 	const [search, setSearch] = useState('');
-	const [generatePrompt, setGeneratePrompt] = useState({
-		id: v4(),
-		act: '',
-		prompt: '',
-	});
 	const [loading, setLoading] = useState(false);
-	const [page, setPage] = useState(false);
 	const [storedValue, setStoredValue] = useChromeExtensionStorage('data');
 
 	useEffect(() => {
@@ -34,32 +26,29 @@ const PromptsContextProvider = ({ children }) => {
 		return prompts.filter((items) =>
 			[items].some((item) => item.act.toLowerCase().includes(search.toLowerCase())),
 		);
-	}, [prompts, search, page]);
+	}, [prompts, search]);
 
-	const form = document.querySelector('form');
-	const button = form.querySelectorAll('button')[4];
+	const textarea = document.getElementById('prompt-textarea');
+	const sendButton = document.querySelector('[data-testid="fruitjuice-send-button"]');
 
 	const handleSubmit = (e, data) => {
-		e.preventDefault();
+		const event = new Event('input', { bubbles: true });
 		setIsOpenModal(false);
-		setSearch('');
-		button.disabled = false;
-		form.querySelector('#prompt-textarea').value = data;
-		button.click();
-	};
+		textarea.value = data;
+		textarea.dispatchEvent(event);
+		sendButton.disabled = false;
+		sendButton.classList.remove(
+			'disabled:bg-[#D7D7D7]',
+			'disabled:text-[#f4f4f4]',
+			'disabled:hover:opacity-100',
+			'dark:disabled:bg-token-text-quaternary',
+			'dark:disabled:text-token-main-surface-secondary',
+		);
+		setTimeout(() => {
+			sendButton.click();
+		}, 150);
 
-	const handleGeneratePrompt = async () => {
-		setLoading(true);
-		const _id = v4();
-		const newPrompt = await fetchDataGeneratePrompt(generatePrompt.act);
-		const objData = { _id, act: generatePrompt.act, prompt: newPrompt };
-		setGeneratePrompt(objData);
-		setStoredValue('add', objData);
-		setLoading(false);
-	};
-	const handleDeleteGeneratedPrompt = (id) => {
-		const filteredItems = storedValue.filter((item) => item?._id !== id);
-		setStoredValue('delete', filteredItems);
+		setSearch('');
 	};
 
 	return (
@@ -72,14 +61,8 @@ const PromptsContextProvider = ({ children }) => {
 				loading,
 				setSearch,
 				handleSubmit,
-				setPage,
-				page,
-				generatePrompt,
-				setGeneratePrompt,
-				handleGeneratePrompt,
 				storedValue,
 				setStoredValue,
-				handleDeleteGeneratedPrompt,
 			}}>
 			{children}
 		</PromptsContext.Provider>
