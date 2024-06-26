@@ -19,17 +19,4 @@ And activate the developer mode and then select the `dist` file from load unpack
 
 ![chrome_extension](./repo_asset/PNG/chrome-extension-install.png)
 
-# 🗒️ Todo
-
-- [ ] Awesome prompt categorization
-- [ ] Mobile responsive improvements
-
-
-
-# 🧠 Awesome Promtps
-
-![gif-example](./repo_asset/GIF/awesome-prompts.gif)
-
-# 👨🏻‍🎤 Generate ChatGPT prompt
-
-![gif-example](./repo_asset/GIF/generative-prompts.gif)
+![image](https://github.com/alpererdogan8/generative-prompts/assets/19363785/438825d9-371b-46d0-b79a-b1b59aab256d)
