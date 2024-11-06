@@ -22,5 +22,9 @@
 			"matches": ["https://chatgpt.com/*"],
 			"js": ["./src/content_scripts/main.jsx"]
 		}
-	]
+	],
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self'",
+		"sandbox": "sandbox allow-scripts allow-forms; script-src 'self'; child-src 'self'"
+	}
 }
