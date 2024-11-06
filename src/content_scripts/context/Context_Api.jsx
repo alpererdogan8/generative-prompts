@@ -28,25 +28,27 @@ const PromptsContextProvider = ({ children }) => {
 		);
 	}, [prompts, search]);
 
-	const textarea = document.getElementById('prompt-textarea');
-	const sendButton = document.querySelector('[data-testid="fruitjuice-send-button"]');
-
 	const handleSubmit = (e, data) => {
-		const event = new Event('input', { bubbles: true });
+		const textarea = document.querySelector('.ProseMirror#prompt-textarea');
 		setIsOpenModal(false);
-		textarea.value = data;
-		textarea.dispatchEvent(event);
-		sendButton.disabled = false;
-		sendButton.classList.remove(
-			'disabled:bg-[#D7D7D7]',
-			'disabled:text-[#f4f4f4]',
-			'disabled:hover:opacity-100',
-			'dark:disabled:bg-token-text-quaternary',
-			'dark:disabled:text-token-main-surface-secondary',
-		);
-		setTimeout(() => {
-			sendButton.click();
-		}, 150);
+
+		if (textarea) {
+			// Textarea'yı güncelle
+			textarea.innerHTML = `<p>${data}</p>`;
+			textarea.dispatchEvent(new Event('input', { bubbles: true }));
+
+			setTimeout(() => {
+				// Enter tuşu simülasyonu
+				textarea.dispatchEvent(
+					new KeyboardEvent('keydown', {
+						key: 'Enter',
+						code: 'Enter',
+						keyCode: 13,
+						bubbles: true,
+					}),
+				);
+			}, 500);
+		}
 
 		setSearch('');
 	};
